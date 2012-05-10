@@ -327,7 +327,7 @@ set foldtext=MyFoldText()
 " }}}
 " filetype-specific ------------------------------------------------------- {{{
 
-" C {{{
+" c {{{
 
 augroup ft_c
 	au!
@@ -339,13 +339,25 @@ augroup END
 " }}}
 " plugin settings --------------------------------------------------------- {{{
 
-" Ack {{{
+" ack {{{
 
 nnoremap <leader>a :Ack!<space>
 
 " }}}
+" commentary {{{
 
-" Easymotion {{{
+nmap <leader>c <Plug>CommentaryLine
+xmap <leader>c <Plug>Commentary
+
+augroup plugin_commentary
+	au!
+	au FileType htmldjango setlocal commentstring={#\ %s\ #}
+	au FileType clojurescript setlocal commentstring=;\ %s
+	au FileType puppet setlocal commentstring=#\ %s
+augroup END
+
+" }}}
+" easymotion {{{
 
 let g:EasyMotion_do_mapping = 0
 
@@ -361,8 +373,37 @@ onoremap <silent> <Leader>t      :call EasyMotion#T(0, 0)<CR>
 onoremap <silent> <Leader>T      :call EasyMotion#T(0, 1)<CR>
 
 " }}}
+" fugitive {{{
 
+nnoremap <leader>gd  :Gdiff<cr>
+nnoremap <leader>gs  :Gstatus<cr>
+nnoremap <leader>gw  :Gwrite<cr>
+nnoremap <leader>ga  :Gadd<cr>
+nnoremap <leader>gb  :Gblame<cr>
+nnoremap <leader>gco :GCheckout<cr>
+nnoremap <leader>gci :GCommit<cr>
+nnoremap <leader>gm  :Gmove<cr>
+nnoremap <leader>gr  :Gremove<cr>
+nnoremap <leader>gl  :Shell git gl -18<cr>:wincmd \|<cr>
 
+augroup ft_fugitive
+	au!
+
+	au BufNewFile,BufRead .git/index setlocal nolist
+augroup END
+
+" }}}
+" syntastic {{{
+
+let g:syntastic_enable_signs = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_disabled_filetypes = ['html', 'rst']
+let g:syntastic_stl_format = '[%E{%e Errors}%B{, }%W{%w Warnings}]'
+let g:syntastic_jsl_conf = '$HOME/.vim/jsl.conf'
+
+" }}}
+
+" }}}
 " environments (gui/console) ---------------------------------------------- {{{
 if has('gui_running')
 	" gui vim
