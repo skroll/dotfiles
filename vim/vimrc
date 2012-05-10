@@ -40,8 +40,6 @@ set dictionary=/usr/share/dict/words
 set spellfile=~/.vim/custom-dictionary.utf-8.add
 set colorcolumn=+1
 
-set statusline=%F%m%r%h%w%=(%{&ff}/%Y)\ (line\ %l\/%L,\ col\ %c)
-
 " time out on key codes but not mappings.
 " basically this makes terminal vim work sanely.
 set notimeout
