@@ -173,6 +173,9 @@ inoremap <F1> <ESC>:set invfullscreen<CR>a
 " stop it, hash key
 inoremap # X<BS>#
 
+" toggle line numbers
+nnoremap <leader>n :setlocal number!<cr>
+
 " clean trailing whitespace
 nnoremap <leader>w mz:%s/\s\+$//<cr>:let @/=''<cr>`z
 
@@ -296,7 +299,7 @@ nnoremap <down>  :lnext<cr>zvzz
 " }}}
 " folding ----------------------------------------------------------------- {{{
 
-set foldlevelstart=0
+set foldlevelstart=999
 
 " space to toggle folds
 nnoremap <Space> za
@@ -332,6 +335,10 @@ set foldtext=MyFoldText()
 augroup ft_c
 	au!
 	au FileType c setlocal foldmethod=syntax
+	au FileType c let fname = expand('~/src/types.vim')
+	au FileType c if filereadable(fname)
+	au FileType c   exe 'so ' . fname
+	au FileType c endif
 augroup END
 
 " }}}
@@ -355,6 +362,46 @@ augroup plugin_commentary
 	au FileType clojurescript setlocal commentstring=;\ %s
 	au FileType puppet setlocal commentstring=#\ %s
 augroup END
+
+" }}}
+" ctrl-p {{{
+
+let g:ctrlp_dont_split = 'NERD_tree_2'
+let g:ctrlp_jump_to_buffer = 0
+let g:ctrlp_map = '<leader>,'
+let g:ctrlp_working_path_mode = 2
+let g:ctrlp_match_window_reversed = 1
+let g:ctrlp_split_window = 0
+let g:ctrlp_max_height = 20
+let g:ctrlp_extensions = ['tag']
+
+let g:ctrlp_prompt_mappings = {
+\ 'PrtSelectMove("j")':   ['<c-j>', '<down>', '<s-tab>'],
+\ 'PrtSelectMove("k")':   ['<c-k>', '<up>', '<tab>'],
+\ 'PrtHistory(-1)':       ['<c-n>'],
+\ 'PrtHistory(1)':        ['<c-p>'],
+\ 'ToggleFocus()':        ['<c-tab>'],
+\ }
+
+let ctrlp_filter_greps = "".
+    \ "egrep -iv '\\.(" .
+    \ "jar|class|swp|swo|log|so|o|pyc|jpe?g|png|gif|mo|po" .
+    \ ")$' | " .
+    \ "egrep -v '^(\\./)?(" .
+    \ "deploy/|lib/|classes/|libs/|deploy/vendor/|.git/|.hg/|.svn/|.*migrations/" .
+    \ ")'"
+
+let my_ctrlp_user_command = "" .
+    \ "find %s '(' -type f -or -type l ')' -maxdepth 15 -not -path '*/\\.*/*' | " .
+    \ ctrlp_filter_greps
+
+let my_ctrlp_git_command = "" .
+    \ "cd %s && git ls-files | " .
+    \ ctrlp_filter_greps
+
+let g:ctrlp_user_command = ['.git/', my_ctrlp_git_command, my_ctrlp_user_command]
+
+nnoremap <leader>. :CtrlPTag<cr>
 
 " }}}
 " easymotion {{{
@@ -393,10 +440,16 @@ augroup ft_fugitive
 augroup END
 
 " }}}
+" powerline {{{
+
+let g:Powerline_symbols = 'fancy'
+let g:Powerline_cache_enabled = 1
+
+" }}}
 " syntastic {{{
 
 let g:syntastic_enable_signs = 1
-let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_open = 0
 let g:syntastic_disabled_filetypes = ['html', 'rst']
 let g:syntastic_stl_format = '[%E{%e Errors}%B{, }%W{%w Warnings}]'
 let g:syntastic_jsl_conf = '$HOME/.vim/jsl.conf'
