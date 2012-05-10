@@ -25,3 +25,6 @@
 [submodule "vim/bundle/nerdtree"]
 	path = vim/bundle/nerdtree
 	url = git://github.com/skroll/nerdtree.git
+[submodule "vim/bundle/badwolf"]
+	path = vim/bundle/badwolf
+	url = git://github.com/skroll/badwolf.git
