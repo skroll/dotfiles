@@ -449,6 +449,27 @@ augroup ft_fugitive
 augroup END
 
 " }}}
+" nerdtree {{{
+
+noremap  <F2> :NERDTreeToggle<cr>
+inoremap <F2> <esc>:NERDTreeToggle<cr>
+
+augroup ps_nerdtree
+	au!
+
+	au Filetype nerdtree setlocal nolist
+	au Filetype nerdtree nnoremap <buffer> K :q<cr>
+augroup END
+
+let NERDTreeHighlightCursorline = 1
+
+let NERDTreeIgnore = ['.vim$', '\~$', '.*\.pyc$', 'pip-log\.txt$', 'whoosh_index',
+                    \ 'xapian_index', '.*.pid', 'monitor.py', '.*-fixtures-.*.json',
+                    \ '.*\.o$', 'db.db', 'tags.bak']
+let NERDTreeMinimalUI = 1
+let NERDTreeDirArrows = 1
+
+" }}}
 " powerline {{{
 
 let g:Powerline_symbols = 'fancy'
