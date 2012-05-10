@@ -7,3 +7,6 @@
 [submodule "vim/bundle/ctab"]
 	path = vim/bundle/ctab
 	url = git://github.com/skroll/Smart-Tabs.git
+[submodule "vim/bundle/ack"]
+	path = vim/bundle/ack
+	url = git://github.com/skroll/ack.vim.git
