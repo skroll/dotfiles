@@ -1,0 +1,3 @@
+[submodule "vim/bundle/commentary"]
+	path = vim/bundle/commentary
+	url = git://github.com/skroll/vim-commentary.git
