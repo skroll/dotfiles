@@ -4,3 +4,6 @@
 [submodule "vim/bundle/fugitive"]
 	path = vim/bundle/fugitive
 	url = git://github.com/skroll/vim-fugitive.git
+[submodule "vim/bundle/ctab"]
+	path = vim/bundle/ctab
+	url = git://github.com/skroll/Smart-Tabs.git
