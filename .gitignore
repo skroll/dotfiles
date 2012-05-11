@@ -1,3 +1,6 @@
 vim/tmp/*
 .netrwhist
+mutt/temp
+mutt/certificates
+mutt/cache
 
