@@ -1,0 +1,12 @@
+defaults
+tls on
+tls_trust_file "~/.local/etc/ssl/certs/ca-certificates.pem"
+tls_starttls off
+delivery mda "/usr/bin/procmail -f '%F' -d $USER"
+
+account infogation
+host pop.bizmail.yahoo.com
+user skroll@infogation.com
+passwordeval get_keychain_pass "skroll@infogation.com" "pop.bizmail.yahoo.com"
+
+account default : infogation
