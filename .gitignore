@@ -3,4 +3,5 @@ vim/tmp/*
 mutt/temp
 mutt/certificates
 mutt/cache
+*.pyc
 
