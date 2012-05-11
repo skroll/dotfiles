@@ -1,0 +1,44 @@
+[general]
+ui         = ttyui
+accounts   = GMail,Kevadiya
+pythonfile = ~/.local/lib/python/skroll/security/__init__.py
+
+[Account GMail]
+localrepository  = Gmail-Local
+remoterepository = Gmail-Remote
+
+[Repository Gmail-Local]
+type = Maildir
+localfolders = ~/.mail/gmail
+
+[Repository Gmail-Remote]
+type = Gmail
+remoteuser     = skroll@gmail.com
+remotepasseval = get_keychain_pass("skroll@gmail.com", "imap.gmail.com")
+realdelete     = no
+maxconnections = 2
+
+# "[Gmail]/Some Folder" --> some_folder
+nametrans = lambda folder: re.sub('^inbox$', 'INBOX',
+                           re.sub(' +', '_',
+                           re.sub(r'.*/(.*)$', r'\1', folder).lower()))
+
+[Account Kevadiya]
+localrepository  = Kevadiya-Local
+remoterepository = Kevadiya-Remote
+
+[Repository Kevadiya-Local]
+type         = Maildir
+localfolders = ~/.mail/kevadiya
+
+[Repository Kevadiya-Remote]
+type           = Gmail
+remoteuser     = skroll@kevadiya.com
+remotepasseval = get_keychain_pass("skroll@kevadiya.com", "imap.gmail.com")
+realdelete     = no
+
+# "[Gmail]/Some Folder" --> some_folder
+nametrans = lambda folder: re.sub('^inbox$', 'INBOX',
+                           re.sub(' +', '_',
+                           re.sub(r'.*/(.*)$', r'\1', folder).lower()))
+
