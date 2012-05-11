@@ -1,0 +1,6 @@
+mailboxes =gmail
+mailboxes +gmail/INBOX +gmail/archive +gmail/sent +gmail/drafts +gmail/spam +gmail/trash
+mailboxes =infogation
+mailboxes =infogation/inbox =infogation/archive
+mailboxes =kevadiya
+mailboxes +kevadiya/INBOX +kevadiya/archive +kevadiya/sent +kevadiya/drafts +kevadiya/spam +kevadiya/trash

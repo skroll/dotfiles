@@ -1,0 +1,8 @@
+set from = "skroll@infogation.com"
+set mbox = "=infogation/archive"
+unset record
+set postponed = "=infogation/drafts"
+set smtp_url = smtps://skroll@infogation.com@smtp.bizmail.yahoo.com:465/
+set smtp_pass = `get_keychain_pass "skroll@infogation.com" "pop.bizmail.yahoo.com"`
+
+macro index,pager \cA "s=infogation/archive<enter>" "move to archive"
