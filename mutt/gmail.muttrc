@@ -3,6 +3,6 @@ set mbox = "+gmail/archive"
 unset record
 set postponed = "+gmail/drafts"
 set smtp_url = smtp://skroll@smtp.gmail.com:587/
-set smtp_pass = `get_keychain_pass "skroll@gmail.com" "imap.gmail.com"`
+set smtp_pass = `get_keychain_pass.py "skroll@gmail.com" "imap.gmail.com"`
 
 macro index,pager \cA "s+gmail/archive<enter>" "move to archive"
