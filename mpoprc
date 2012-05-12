@@ -7,6 +7,6 @@ delivery mda "/usr/bin/procmail -f '%F' -d $USER"
 account infogation
 host pop.bizmail.yahoo.com
 user skroll@infogation.com
-passwordeval get_keychain_pass "skroll@infogation.com" "pop.bizmail.yahoo.com"
+passwordeval get_keychain_pass.py "skroll@infogation.com" "pop.bizmail.yahoo.com"
 
 account default : infogation
