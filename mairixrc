@@ -1,0 +1,7 @@
+base=/Users/skroll/.mail
+database=~/.mairix/database
+
+mformat=maildir
+maildir=gmail/INBOX:gmail/archive:infogation/inbox:infogation/archive:kevadiya/INBOX:kevadiya/archive
+mfolder=~/.mail/mairix-search
+

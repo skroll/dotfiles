@@ -33,6 +33,7 @@ unset mark_old
 set beep_new
 set pipe_decode
 set thorough_search
+unignore Message-ID:
 
 # index options
 set sort = threads
@@ -57,14 +58,12 @@ alternative_order text/plain text/enriched text/html  # but prefer non-html
 source ~/.vim/bundle/badwolf/contrib/badwolf.muttrc # colorscheme
 source ~/.mutt/sidebar.muttrc
 source ~/.mutt/mailboxes.muttrc
+source ~/.mutt/macros.muttrc
 
 # account specific sources
-folder-hook gmail/* source ~/.mutt/gmail.muttrc
+folder-hook gmail/*      source ~/.mutt/gmail.muttrc
 folder-hook infogation/* source ~/.mutt/infogation.muttrc
-folder-hook kevadiya/* source ~/.mutt/kevadiya.muttrc
-
-# create omnifocus task from message
-macro index,pager \cL "<pipe-message>mutt-to-omnifocus.py<enter>" "send message to omnifocus"
+folder-hook kevadiya/*   source ~/.mutt/kevadiya.muttrc
 
 # unbind problematic keys
 bind index,pager \# noop
