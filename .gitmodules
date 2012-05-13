@@ -28,3 +28,6 @@
 [submodule "vim/bundle/badwolf"]
 	path = vim/bundle/badwolf
 	url = git://github.com/skroll/badwolf.git
+[submodule "zeesh"]
+	path = zeesh
+	url = git://github.com/skroll/zeesh.git
