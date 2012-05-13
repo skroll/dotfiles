@@ -1,5 +1,5 @@
 # create omnifocus task from message
-macro index,pager \cL "<pipe-message>mutt-to-omnifocus.py<enter>" "send message to omnifocus"
+macro index,pager \cL "<pipe-message>$HOME/.mutt/mutt-to-omnifocus.py<enter>" "send message to omnifocus"
 
 macro index,pager "\em"  "<shell-escape>$HOME/.mutt/msearch.sh " "run a mairix search"
 macro index,pager "\ef"  "<change-folder-readonly>=mairix-search\n" "switch to mairix search results"
