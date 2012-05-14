@@ -1,21 +1,18 @@
 ## .procmailrc
-##
-DEFAULT=$HOME/.mail/infogation/inbox/
-#DATE=`date +%Y-%m`
-#SHELL=/bin/sh
-#VERBOSE=off
-#PMDIR=/Users/skroll/.procmail
-#LOGFILE=$PMDIR/procmail.log
+DATE=`date +%Y-%m`
+SHELL=/bin/sh
+VERBOSE=off
+PMDIR=/Users/skroll/.procmail
+LOGFILE=$PMDIR/procmail.log
 ## inserts a blank line between log entries
-#LOG=""
-#MAILDIR=$HOME/.mail/infogation
-#DEFAULT=$HOME/.mail/infogation
-# 
-##
-## delete duplicate messages first
-##
-#:0 Wh: msgid.lock
-#| formail -D 8192 $PMDIR/msgid.cache
-# 
-#:0
-#$MAIL/inbox
+LOG=""
+MAIL=/Users/skroll/.mail
+
+#
+# delete duplicate messages first
+#
+:0 Wh: msgid.lock
+| formail -D 8192 $PMDIR/msgid.cache
+ 
+:0
+$MAIL/infogation/inbox/
