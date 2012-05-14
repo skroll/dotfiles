@@ -1,0 +1,23 @@
+# bindings.muttrc
+
+# unbind problematic keys
+bind index,pager \# noop
+bind index i        noop
+bind index w        noop
+
+# basic bindings
+bind pager i        exit
+bind pager /        search
+bind pager k        previous-line
+bind pager j        next-line
+bind pager gg       top
+bind pager G        bottom
+bind index,pager R  group-reply
+bind index <tab>    sync-mailbox
+bind index k        previous-entry
+bind index j        next-entry
+bind index gg       first-entry
+bind index G        last-entry
+bind index \Cp      recall-message
+bind index <space>  collapse-thread
+

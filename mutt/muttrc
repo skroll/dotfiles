@@ -1,4 +1,7 @@
-# directories and commands
+# .muttrc
+
+# basic --------------------------------------------------------------------{{{
+# directories and files {{{
 set alias_file       = ~/.mutt/alias
 set header_cache     = ~/.mutt/cache/headers
 set message_cachedir = ~/.mutt/cache/bodies
@@ -6,8 +9,12 @@ set certificate_file = ~/.mutt/certificates
 set mailcap_path     = ~/.mutt/mailcap
 set signature        = ~/.mutt/sig
 set tmpdir           = ~/.mutt/temp
-set print_command    = /usr/bin/enscript
 set spoolfile        = ~/.mail/gmail/INBOX
+# }}}
+# commands {{{
+
+set print_command    = /usr/bin/enscript
+
 # use vim to compose email, with a few default options
 set editor = "vim +/^$ +:s/^$/\\\\r\\\\r/ +:noh -c 'normal! k' -c 'set nolist' -c 'redraw'"
 
@@ -16,12 +23,14 @@ set query_command = "lbdbq '%s' | sed -e 's/(null)//g'"
 bind editor <Tab> complete-query
 bind editor ^T    complete
 
-# main options
-set wait_key  = no
-set mbox_type = Maildir # mailbox type
-set folder    = ~/.mail
-set mbox      = ~/.mail
-set timeout = 3
+# }}}
+# main options {{{
+
+set wait_key   = no
+set mbox_type  = Maildir # mailbox type
+set folder     = ~/.mail
+set mbox       = ~/.mail
+set timeout    = 3
 set mail_check = 0
 set sort_alias = alias
 set reverse_alias
@@ -35,54 +44,52 @@ set pipe_decode
 set thorough_search
 unignore Message-ID:
 
-# index options
+# }}}
+# index options {{{
+
 set sort = threads
 set sort_aux = reverse-last-date-received
 set uncollapse_jump
 set sort_re
 set reply_regexp = "^(([Rr][Ee]?(\[[0-9]+\])?: *)?(\[[^]]+\] *)?)*"
 
-# pager options
+# }}}
+# pager options {{{
+
 set pager_index_lines = 10
 
-# formats
+# }}}
+# formats {{{
 set date_format   = "%m/%d"
 set index_format  = "[%Z]  %D  %-20.20F  %s"
 set status_format = "-%r- %v ---[ Folder: %f, Msgs: %m%?n? New: %n?%?d? Del: %d?%?t? Tag: %t?%?l? %l? ]%?p?---- .: %p waiting to send :. ?--%>- (%P) ---"
 set alias_format  = "%4n %t %-20a  %r"
 
+# }}}
+# view options {{{
+
 auto_view text/html
 alternative_order text/plain text/enriched text/html  # but prefer non-html
 
-# always sourced
+# }}}
+# }}}
+# other configuration ------------------------------------------------------{{{
+# always sourced {{{
+
 source ~/.vim/bundle/badwolf/contrib/badwolf.muttrc # colorscheme
 source ~/.mutt/sidebar.muttrc
 source ~/.mutt/mailboxes.muttrc
 source ~/.mutt/macros.muttrc
+source ~/.mutt/bindings.muttrc
+source ~/.mutt/gpg.muttrc
 
-# account specific sources
+# }}}
+# account specific sources {{{
+
 folder-hook gmail/*      source ~/.mutt/gmail.muttrc
 folder-hook infogation/* source ~/.mutt/infogation.muttrc
 folder-hook kevadiya/*   source ~/.mutt/kevadiya.muttrc
 
-# unbind problematic keys
-bind index,pager \# noop
-bind index i        noop
-bind index w        noop
-
-# basic bindings
-bind pager i        exit
-bind pager /        search
-bind pager k        previous-line
-bind pager j        next-line
-bind pager gg       top
-bind pager G        bottom
-bind index,pager R  group-reply
-bind index <tab>    sync-mailbox
-bind index k        previous-entry
-bind index j        next-entry
-bind index gg       first-entry
-bind index G        last-entry
-bind index \Cp      recall-message
-bind index <space>  collapse-thread
+# }}}
+# }}}
 

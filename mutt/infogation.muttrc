@@ -1,3 +1,7 @@
+# infogation.muttrc
+
+# basic settings {{{
+
 set from = "skroll@infogation.com"
 set mbox = "=infogation/archive"
 unset record
@@ -6,3 +10,10 @@ set smtp_url = smtps://skroll@infogation.com@smtp.bizmail.yahoo.com:465/
 set smtp_pass = `get_keychain_pass.py "skroll@infogation.com" "pop.bizmail.yahoo.com"`
 
 macro index,pager \cA "s=infogation/archive<enter>" "move to archive"
+
+# }}}
+# pgp settings {{{
+
+set pgp_autosign=no
+
+# }}}
