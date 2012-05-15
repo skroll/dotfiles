@@ -361,6 +361,28 @@ augroup ft_c
 augroup END
 
 " }}}
+" css {{{
+
+augroup ft_css
+	au!
+	au FileType css set tabstop=2
+	au FileType css set shiftwidth=2
+	au FileType css set softtabstop=2
+	au FileType css set expandtab
+augroup END
+
+" }}}
+" less {{{
+
+augroup ft_less
+	au!
+	au FileType less set tabstop=2
+	au FileType less set shiftwidth=2
+	au FileType less set softtabstop=2
+	au FileType less set expandtab
+augroup END
+
+" }}}
 " python {{{
 
 augroup ft_python
@@ -376,10 +398,21 @@ augroup END
 
 augroup ft_html
 	au!
-	au FileType html set tabstop=4
-	au FileType html set shiftwidth=4
-	au FileType html set softtabstop=4
+	au FileType html set tabstop=2
+	au FileType html set shiftwidth=2
+	au FileType html set softtabstop=2
 	au FileType html set expandtab
+augroup END
+
+" }}}
+" j2 {{{
+
+augroup ft_j2
+	au!
+	au FileType j2 set tabstop=2
+	au FileType j2 set shiftwidth=2
+	au FileType j2 set softtabstop=2
+	au FileType j2 set expandtab
 augroup END
 
 " }}}
