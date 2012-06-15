@@ -6,7 +6,6 @@ export EDITOR="vim" # of course
 
 cellar_root="/usr/local/Cellar"
 eyed3_version="0.6.17"
-ruby_version="1.9.3-p0"
 
 # }}}
 # aliases {{{
@@ -20,8 +19,8 @@ alias tm="tmux -u2"
 [[ -d /usr/local/sbin ]]         && path=(/usr/local/sbin $path)
 [[ -d /usr/local/share/python ]] && path=(/usr/local/share/python $path)
 [[ -d ~/.local/bin ]]            && path=(~/.local/bin $path)
-[[ -d $cellar_root/ruby/$ruby_version/bin ]] \
-	&& path=($cellar_root/ruby/$ruby_version/bin $path)
+[[ -d ~/.cabal/bin ]]            && path=(~/.cabal/bin $path)
+
 # }}}
  
 # }}}
@@ -42,7 +41,10 @@ export MAVEN_OPTS="-Xmx1024m" # we build big up in heah
 	&& pythonpath=($cellar_root/eye-d3/$eyed3_version/libexec $pythonpath)
 [[ -d ~/.local/lib/python ]] \
 	&& pythonpath=(~/.local/lib/python $pythonpath)
-
+[[ -d ~/src/hyde ]] \
+	&& pythonpath=(~/src/hyde $pythonpath)
+[[ -d ~/src/python ]] \
+	&& pythonpath=(~/src/python $pythonpath)
 export PYTHONPATH="${(j":")pythonpath}"
 unset pythonpath
 
@@ -67,5 +69,11 @@ mailpath=(~/.mail/gmail/INBOX'?You have new mail in gmail'
 	~/.mail/kevadiya/INBOX'?You have new mail in kevadiya')
 
 # }}}
+# ruby {{{
+
+[[ -n "$(command -v rbenv)" ]] && eval "$(rbenv init -)"
 
 # }}}
+
+# }}}
+
