@@ -316,6 +316,17 @@ map <D-8> :tabn 8<CR>
 map <D-9> :tabn 9<CR>
 
 " }}}
+" tab manipulation {{{
+
+map th :tabfirst<CR>
+map tj :tabnext<CR>
+map tk :tabprev<CR>
+map tl :tablast<CR>
+map tt :tabedit<Space>
+map tn :tabnext<Space>
+map tm :tabm<Space>
+
+" }}}
 " folding ----------------------------------------------------------------- {{{
 
 set foldlevelstart=999
