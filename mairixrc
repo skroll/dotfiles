@@ -2,6 +2,6 @@ base=/Users/skroll/.mail
 database=~/.mairix/database
 
 mformat=maildir
-maildir=gmail/INBOX:gmail/archive:infogation/inbox:infogation/archive:kevadiya/INBOX:kevadiya/archive
+maildir=gmail:gmail/.flagged:gmail/.important:gmail/.sent:infogation:kevadiya:kevadiya/.flagged:kevadiya/.sent
 mfolder=~/.mail/mairix-search
 
