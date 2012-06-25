@@ -8,6 +8,5 @@ account infogation
 host pop.bizmail.yahoo.com
 user skroll@infogation.com
 passwordeval echo "import keyring\nprint keyring.get_password('pop.bizmail.yahoo.com', 'skroll@infogation.com')" | python
-#passwordeval get_keychain_pass.py "skroll@infogation.com" "pop.bizmail.yahoo.com"
 
 account default : infogation
