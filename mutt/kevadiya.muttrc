@@ -7,7 +7,7 @@ set mbox = "+kevadiya/archive"
 unset record
 set postponed = "+kevadiya/drafts"
 set smtp_url = smtp://skroll@kevadiya.com@smtp.gmail.com:587/
-set smtp_pass = `get_keychain_pass.py "skroll@kevadiya.com" "imap.gmail.com"`
+set smtp_pass = `echo "import keyring\nprint keyring.get_password('imap.gmail.com', 'skroll@kevadiya.com')" | python`
 macro index,pager \cA "s+kevadiya/archive<enter>" "move to archive"
 
 # }}}

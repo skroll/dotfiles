@@ -2,5 +2,4 @@ mailboxes =gmail # divider for sidebar
 mailboxes +gmail/INBOX +gmail/archive +gmail/sent +gmail/drafts +gmail/spam +gmail/trash
 mailboxes =infogation # divider for sidebar
 mailboxes =infogation/inbox =infogation/archive
-mailboxes =kevadiya # divider for sidebar
-mailboxes +kevadiya/INBOX +kevadiya/archive +kevadiya/sent +kevadiya/drafts +kevadiya/spam +kevadiya/trash
+mailboxes +kevadiya +kevadiya/.important +kevadiya/.flagged +kevadiya/.drafts +kevadiya/.sent +kevadiya/.spam +kevadiya/.trash
