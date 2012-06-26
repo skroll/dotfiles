@@ -1,19 +1,21 @@
-# infogation.muttrc
+# kevadiya.muttrc
 
 # basic settings {{{
 
 set from = "skroll@kevadiya.com"
-set mbox = "+kevadiya/archive"
+set mbox = "+kevadiya/.archive"
 unset record
-set postponed = "+kevadiya/drafts"
-set smtp_url = smtp://skroll@kevadiya.com@smtp.gmail.com:587/
-set smtp_pass = `echo "import keyring\nprint keyring.get_password('imap.gmail.com', 'skroll@kevadiya.com')" | python`
-macro index,pager \cA "s+kevadiya/archive<enter>" "move to archive"
+set postponed = "+kevadiya/.drafts"
+set sendmail="/usr/local/bin/msmtp -a kevadiya"
+macro index,pager \cA "s+kevadiya/.archive<enter>" "move to archive"
 
 # }}}
 # pgp settings {{{
 
-set pgp_autosign=no
+set pgp_encrypt_only_command="pgpewrap gpg --batch --quiet --no-verbose --output - --encrypt --textmode --armor --always-trust --encrypt-to 0x80E434A0 -- -r %r -- %f"
+set pgp_encrypt_sign_command="pgpewrap gpg --passphrase-fd 0 --batch --quiet --no-verbose --textmode --output - --encrypt --sign %?a?-u %a? --armor --always-trust --encrypt-to 0x80E434A0 -- -r %r -- %f"
+set pgp_sign_as=0x80E434A0
+set pgp_autosign=yes
 
 # }}}
 

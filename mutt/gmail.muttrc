@@ -2,11 +2,11 @@
 
 # basic settings {{{
 set from = "skroll@gmail.com"
-set mbox = "+gmail/archive"
+set mbox = "+gmail/.archive"
 unset record
-set postponed = "+gmail/drafts"
+set postponed = "+gmail/.drafts"
 set sendmail="/usr/local/bin/msmtp -a gmail"
-macro index,pager \cA "s+gmail/archive<enter>" "move to archive"
+macro index,pager \cA "s+gmail/.archive<enter>" "move to archive"
 
 # }}}
 # pgp settings {{{
