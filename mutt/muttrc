@@ -9,7 +9,7 @@ set certificate_file = ~/.mutt/certificates
 set mailcap_path     = ~/.mutt/mailcap
 set signature        = ~/.mutt/sig
 set tmpdir           = ~/.mutt/temp
-set spoolfile        = ~/.mail/gmail/INBOX
+set spoolfile        = ~/.mail/gmail
 # }}}
 # commands {{{
 
