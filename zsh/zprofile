@@ -4,9 +4,6 @@
 
 export EDITOR="vim" # of course
 
-cellar_root="/usr/local/Cellar"
-eyed3_version="0.6.17"
-
 # }}}
 # aliases {{{
 
@@ -14,7 +11,6 @@ alias tm="tmux -u2"
 
 # }}}
 # path {{{
- 
 [[ -d /usr/local/bin ]]          && path=(/usr/local/bin $path)
 [[ -d /usr/local/sbin ]]         && path=(/usr/local/sbin $path)
 [[ -d /usr/local/share/python ]] && path=(/usr/local/share/python $path)
@@ -33,20 +29,6 @@ export HASTE_SERVER="http://192.168.1.156:7777" # make work-life easier
 # maven {{{
  
 export MAVEN_OPTS="-Xmx1024m" # we build big up in heah
-
-# }}}
-# python {{{
-
-[[ -d $cellar_root/eye-d3/$eyed3_version/libexec ]] \
-	&& pythonpath=($cellar_root/eye-d3/$eyed3_version/libexec $pythonpath)
-[[ -d ~/.local/lib/python ]] \
-	&& pythonpath=(~/.local/lib/python $pythonpath)
-[[ -d ~/src/hyde ]] \
-	&& pythonpath=(~/src/hyde $pythonpath)
-[[ -d ~/src/python ]] \
-	&& pythonpath=(~/src/python $pythonpath)
-export PYTHONPATH="${(j":")pythonpath}"
-unset pythonpath
 
 # }}}
 
