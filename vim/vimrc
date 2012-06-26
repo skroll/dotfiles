@@ -459,6 +459,7 @@ augroup ft_ruby
 	au FileType ruby set softtabstop=2
 	au FileType ruby set expandtab
 augroup END
+
 " }}}
 " xml {{{
 
@@ -469,6 +470,7 @@ augroup ft_xml
 	au FileType xml set softtabstop=2
 	au FileType xml set expandtab
 augroup END
+
 " }}}
 " }}}
 " plugin settings --------------------------------------------------------- {{{
