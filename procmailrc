@@ -15,4 +15,4 @@ MAIL=/Users/skroll/.mail
 | formail -D 8192 $PMDIR/msgid.cache
 
 :0
-$MAIL/infogation/.inbox/
+$MAIL/infogation/
