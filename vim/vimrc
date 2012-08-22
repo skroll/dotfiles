@@ -171,7 +171,33 @@ inoremap <F1> <ESC>:set invfullscreen<CR>a
 inoremap # X<BS>#
 
 " toggle line numbers
-nnoremap <leader>n :setlocal number!<cr>
+function! ToggleNumberType()
+	if(&relativenumber == 0 && &number == 0)
+		return
+	endif
+
+	if(&relativenumber == 1)
+		set number
+	else
+		set relativenumber
+	endif
+endfunc
+
+function! ToggleNumberShow()
+	if(&relativenumber == 0 && &number == 0)
+		set number
+		return
+	endif
+
+	if(&relativenumber == 1)
+		set relativenumber!
+	else
+		set number!
+	endif
+endfunc
+
+nnoremap <C-n> :call ToggleNumberType()<cr>
+nnoremap <leader>n :call ToggleNumberShow()<cr>
 
 " clean trailing whitespace
 nnoremap <leader>w mz:%s/\s\+$//<cr>:let @/=''<cr>`z
