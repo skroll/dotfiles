@@ -635,7 +635,7 @@ let g:syntastic_stl_format = '[%E{%e Errors}%B{, }%W{%w Warnings}]'
 " environments (gui/console) ---------------------------------------------- {{{
 if has('gui_running')
 	" gui vim
-	set guifont=Bistream\ Vera\ Sans\ Mono\ for\ Powerline:h12
+	set guifont=Menlo\ for\ Powerline:h12
 
 	" remove all the ui cruft
 	set go-=T
