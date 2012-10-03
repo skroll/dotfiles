@@ -639,6 +639,9 @@ let g:syntastic_disabled_filetypes = ['html', 'rst']
 let g:syntastic_stl_format = '[%E{%e Errors}%B{, }%W{%w Warnings}]'
 
 " }}}
+" tagbar {{{
+nmap <F8> :TagbarToggle<CR>
+" }}}
 
 " }}}
 " environments (gui/console) ---------------------------------------------- {{{
