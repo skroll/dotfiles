@@ -648,6 +648,7 @@ nmap <F8> :TagbarToggle<CR>
 if has('gui_running')
 	" gui vim
 	set guifont=Menlo\ for\ Powerline:h12
+	colorscheme badwolf_easycolour
 
 	" remove all the ui cruft
 	set go-=T
