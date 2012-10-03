@@ -37,3 +37,6 @@
 [submodule "vim/bundle/easycolour"]
 	path = vim/bundle/easycolour
 	url = git://github.com/skroll/vim-easycolour.git
+[submodule "vim/bundle/taghighlight"]
+	path = vim/bundle/taghighlight
+	url = git://github.com/skroll/vim-taghighlight.git
