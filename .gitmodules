@@ -40,3 +40,6 @@
 [submodule "vim/bundle/taghighlight"]
 	path = vim/bundle/taghighlight
 	url = git://github.com/skroll/vim-taghighlight.git
+[submodule "vim/bundle/rails"]
+	path = vim/bundle/rails
+	url = git://github.com/tpope/vim-rails.git
