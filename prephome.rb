@@ -4,6 +4,7 @@ pwd = File.expand_path(File.dirname(__FILE__))
 
 [
   ['gemrc',          '~/.gemrc',          0644],
+  ['irbrc',          '~/.irbrc',          0644],
   ['gitconfig',      '~/.gitconfig',      0644],
   ['mairixrc',       '~/.mairixrc',       0644],
   ['mpoprc',         '~/.mpoprc',         0600],
