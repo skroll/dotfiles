@@ -280,7 +280,7 @@ noremap <silent> <leader><space> :noh<cr>:call clearmatches()<cr>
 " make D behave
 nnoremap D d$
 
-" don't mvoe on *
+" don't move on *
 nnoremap * *<c-o>
 
 " keep search matches in the middle of the window
