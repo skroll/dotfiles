@@ -20,6 +20,9 @@ export ZSH_THEME="default"
 ## Set this if you don't want window title updates
 # export ZEESH_DISABLE_WINDOW_TITLE="true"
 
-plugins=(git-flow)
+## Set this to override the default zsh highlighters
+# export ZEESH_HIGHLIGHT_HIGHLIGHTERS="main brackets"
+
+plugins=(git-flow zsh-syntax-highlighting)
 
 source $ZSH/zeesh.zsh
