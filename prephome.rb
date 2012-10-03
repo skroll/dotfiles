@@ -13,6 +13,7 @@ pwd = File.expand_path(File.dirname(__FILE__))
   ['offlineimaprc',  '~/.offlineimaprc',  0644],
   ['procmailrc',     '~/.procmailrc',     0644],
   ['tmux.conf',      '~/.tmux.conf',      0644],
+  ['lbdbrc',         '~/.lbdbrc',         0644],
   ['zeesh',          '~/.zeesh',          0755],
   ['mutt',           '~/.mutt',           0755],
   ['mutt/muttrc',    '~/.muttrc',         0600],
