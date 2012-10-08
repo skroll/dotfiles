@@ -420,6 +420,14 @@ augroup ft_cql
 augroup END
 
 " }}}
+" git {{{
+
+augroup ft_git
+	au!
+	au FileType gitcommit set foldmethod=syntax
+augroup END
+
+" }}}
 " gitolite {{{
 
 augroup ft_gitolite
