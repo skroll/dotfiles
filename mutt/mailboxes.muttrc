@@ -1,3 +1,25 @@
-mailboxes +gmail +gmail/.important +gmail/.flagged +gmail/.drafts +gmail/.sent +gmail/.spam +gmail/.trash
+mailboxes \
+  +gmail \
+  +gmail/.important \
+  +gmail/.websites \
+  +gmail/.websites/.fitocracy \
+  +gmail/.websites/.facebook \
+  +gmail/.websites/.twitter \
+  +gmail/.websites/.github \
+  +gmail/.flagged \
+  +gmail/.drafts \
+  +gmail/.sent \
+  +gmail/.spam \
+  +gmail/.trash
+
 mailboxes +infogation
-mailboxes +kevadiya +kevadiya/.important +kevadiya/.flagged +kevadiya/.drafts +kevadiya/.sent +kevadiya/.spam +kevadiya/.trash
+
+mailboxes \
+  +kevadiya \
+  +kevadiya/.important \
+  +kevadiya/.flagged \
+  +kevadiya/.drafts \
+  +kevadiya/.sent \
+  +kevadiya/.spam \
+  +kevadiya/.trash
+

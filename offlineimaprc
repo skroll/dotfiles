@@ -10,15 +10,18 @@ remoterepository = Gmail-Remote
 [Repository Gmail-Local]
 type         = Maildir
 localfolders = ~/.mail/gmail
-sep          = .
+sep          = /
 restoreatime = no
-nametrans    = lambda folder: re.sub('^$',           'INBOX',
-                              re.sub('^.spam$',      '[Gmail].Spam',
-                              re.sub('^.drafts$',    '[Gmail].Drafts',
-                              re.sub('^.sent$',      '[Gmail].Sent Mail',
-                              re.sub('^.flagged$',   '[Gmail].Starred',
-                              re.sub('^.trash$',     '[Gmail].Trash',
-                              re.sub('^.important$', '[Gmail].Important', folder)))))))
+nametrans    = lambda folder: re.sub('^$',                            'INBOX',
+                              re.sub('^.spam$',                       '[Gmail].Spam',
+                              re.sub('^.drafts$',                     '[Gmail].Drafts',
+                              re.sub('^.sent$',                       '[Gmail].Sent Mail',
+                              re.sub('^.flagged$',                    '[Gmail].Starred',
+                              re.sub('^.trash$',                      '[Gmail].Trash',
+                              re.sub('^.important$',                  '[Gmail].Important',
+                              re.sub('^.websites$',                   'websites',
+                              re.sub(r'^.websites/.([A-Za-z0-9]+)$', r'websites/\1',
+                              re.sub('^.github$',                     'github', folder))))))))))
 
 [Repository Gmail-Remote]
 type             = Gmail
@@ -33,14 +36,21 @@ folderfilter     = lambda foldername: foldername in ['INBOX',
                                                      '[Gmail]/Sent Mail',
                                                      '[Gmail]/Starred',
                                                      '[Gmail]/Trash',
-                                                     '[Gmail]/Important']
-nametrans        = lambda folder: re.sub('^INBOX$',               '',
-                                  re.sub('^\[Gmail\].Spam$',      '.spam',
-                                  re.sub('^\[Gmail\].Drafts$',    '.drafts',
-                                  re.sub('^\[Gmail\].Sent Mail$', '.sent',
-                                  re.sub('^\[Gmail\].Starred$',   '.flagged',
-                                  re.sub('^\[Gmail\].Trash$',     '.trash',
-                                  re.sub('^\[Gmail\].Important$', '.important', folder)))))))
+                                                     '[Gmail]/Important',
+                                                     'websites/fitocracy',
+                                                     'websites/facebook',
+                                                     'websites/twitter',
+                                                     'websites/github']
+
+nametrans        = lambda folder: re.sub('^INBOX$',                     '',
+                                  re.sub('^\[Gmail\].Spam$',            '.spam',
+                                  re.sub('^\[Gmail\].Drafts$',          '.drafts',
+                                  re.sub('^\[Gmail\].Sent Mail$',       '.sent',
+                                  re.sub('^\[Gmail\].Starred$',         '.flagged',
+                                  re.sub('^\[Gmail\].Trash$',           '.trash',
+                                  re.sub('^\[Gmail\].Important$',       '.important',
+                                  re.sub('^websites$',                  '.websites',
+                                  re.sub(r'^websites/([A-Za-z0-9]+)$', r'.websites/.\1', folder)))))))))
 
 [Account Kevadiya]
 localrepository  = Kevadiya-Local
