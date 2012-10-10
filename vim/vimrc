@@ -201,6 +201,8 @@ nnoremap <leader>n :call ToggleNumberShow()<cr>
 " clean trailing whitespace
 nnoremap <leader>w mz:%s/\s\+$//<cr>:let @/=''<cr>`z
 
+nnoremap <silent> <leader>x mz:.+1ma x<cr>:s/,/,\r/<cr>`z=g'x:'z,'xCtabRedoIndent<cr>:noh<cr>:call clearmatches()<cr>
+
 " send visual selection to hastebin
 vnoremap <c-p> :w !haste \| tr -d '\n ' \| pbcopy && open `pbpaste`<cr>
 
