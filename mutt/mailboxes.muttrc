@@ -12,7 +12,10 @@ mailboxes \
   +gmail/.spam \
   +gmail/.trash
 
-mailboxes +infogation
+mailboxes \
+  +infogation \
+  +infogation/.drafts \
+  +infogation/.sent
 
 mailboxes \
   +kevadiya \
