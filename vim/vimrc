@@ -1,5 +1,6 @@
 " preamble ---------------------------------------------------------------- {{{
 filetype off
+"let g:pathogen_disabled = ['ctab']
 call pathogen#runtime_append_all_bundles()
 filetype plugin indent on
 set nocompatible
@@ -119,9 +120,12 @@ set shiftwidth=4
 set softtabstop=0
 set noexpandtab
 set wrap
-set textwidth=80
+set textwidth=78
 set formatoptions=qrn1
 set colorcolumn=+1
+
+set copyindent
+set preserveindent
 
 set cindent
 set cinoptions=(0,u0,U0
@@ -392,11 +396,6 @@ set foldtext=MyFoldText()
 augroup ft_c
 	au!
 	au FileType c,cpp setlocal foldmethod=syntax
-	au FileType c,cpp let fname = expand('~/src/types.vim')
-	au FileType c,cpp set tags=~/src/tags
-	au FileType c,cpp if filereadable(fname)
-	au FileType c,cpp   exe 'so ' . fname
-	au FileType c,cpp endif
 augroup END
 
 " }}}
@@ -657,7 +656,7 @@ nmap <F8> :TagbarToggle<CR>
 " environments (gui/console) ---------------------------------------------- {{{
 if has('gui_running')
 	" gui vim
-	set guifont=Menlo\ for\ Powerline:h12
+	set guifont=Source\ Code\ Pro\ for\ Powerline:h12
 	colorscheme badwolf_easycolour
 
 	" remove all the ui cruft
@@ -704,4 +703,3 @@ if has('gui_running')
 else
 	" console vim
 endif
-
