@@ -11,12 +11,12 @@ alias tm="tmux -u2"
 
 # }}}
 # path {{{
-[[ -d /usr/local/bin ]]          && path=(/usr/local/bin $path)
-[[ -d /usr/local/sbin ]]         && path=(/usr/local/sbin $path)
-[[ -d /usr/local/share/python ]] && path=(/usr/local/share/python $path)
-[[ -d ~/.local/bin ]]            && path=(~/.local/bin $path)
-[[ -d ~/.cabal/bin ]]            && path=(~/.cabal/bin $path)
-
+[[ -d /usr/local/bin ]]           && path=(/usr/local/bin $path)
+[[ -d /usr/local/sbin ]]          && path=(/usr/local/sbin $path)
+[[ -d /usr/local/share/python ]]  && path=(/usr/local/share/python $path)
+[[ -d ~/.local/bin ]]             && path=(~/.local/bin $path)
+[[ -d ~/.cabal/bin ]]             && path=(~/.cabal/bin $path)
+[[ -d /usr/local/share/npm/bin ]] && path=(/usr/local/share/npm/bin $path)
 # }}}
  
 # }}}
