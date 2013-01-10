@@ -488,10 +488,11 @@ augroup END
 
 augroup ft_ruby
 	au!
-	au FileType ruby,eruby set tabstop=2
-	au FileType ruby,eruby set shiftwidth=2
-	au FileType ruby,eruby set softtabstop=2
-	au FileType ruby,eruby set expandtab
+	autocmd BufNewFile,BufRead Gemfile set filetype=gemfile
+	au FileType ruby,eruby,gemfile set tabstop=2
+	au FileType ruby,eruby,gemfile set shiftwidth=2
+	au FileType ruby,eruby,gemfile set softtabstop=2
+	au FileType ruby,eruby,gemfile set expandtab
 augroup END
 
 " }}}
