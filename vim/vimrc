@@ -1,9 +1,27 @@
 " preamble ---------------------------------------------------------------- {{{
 filetype off
-"let g:pathogen_disabled = ['ctab']
-call pathogen#runtime_append_all_bundles()
+
+set rtp+=~/.vim/bundle/vundle.git/
+call vundle#rc()
+
+Bundle 'gmarik/vundle'
+Bundle 'skroll/vim-easycolour'
+Bundle 'skroll/badwolf'
+Bundle 'Valloric/YouCompleteMe'
+Bundle 'mileszs/ack.vim'
+Bundle 'vim-scripts/Align'
+Bundle 'skroll/Smart-Tabs'
+Bundle 'kien/ctrlp.vim'
+Bundle 'tpope/vim-fugitive'
+Bundle 'scrooloose/nerdtree'
+Bundle 'Lokaltog/vim-powerline'
+Bundle 'tpope/vim-surround'
+Bundle 'scrooloose/syntastic'
+Bundle 'majutsushi/tagbar'
+Bundle 'abudden/TagHighlight'
+
 filetype plugin indent on
-set nocompatible
+
 " }}}
 " basic options ----------------------------------------------------------- {{{
 set encoding=utf-8
