@@ -1,3 +1,5 @@
-require 'rubygems' unless defined? Gem
-require 'irbtools'
+require 'irbtools/configure'
+
+Irbtools.add_package :more
+Irbtools.start
 
