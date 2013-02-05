@@ -7,7 +7,6 @@ pwd = File.expand_path(File.dirname(__FILE__))
   ['irbrc',          '~/.irbrc',          0644],
   ['gitconfig',      '~/.gitconfig',      0644],
   ['tmux.conf',      '~/.tmux.conf',      0644],
-  ['zeesh',          '~/.zeesh',          0755],
   ['vim',            '~/.vim',            0755],
   ['vim/vimrc',      '~/.vimrc',          0600],
   ['zsh/zshrc',      '~/.zshrc',          0600],
