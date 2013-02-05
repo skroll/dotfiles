@@ -4,4 +4,4 @@ mutt/temp
 mutt/certificates
 mutt/cache
 *.pyc
-
+vim/bundle/*
