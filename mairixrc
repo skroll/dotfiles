@@ -1,7 +1,0 @@
-base=/Users/skroll/.mail
-database=~/.mairix/database
-
-mformat=maildir
-maildir=gmail:gmail/.flagged:gmail/.important:gmail/.sent:gmail/.flagged:infogation:kevadiya:kevadiya/.flagged:kevadiya/.sent
-mfolder=~/.mail/mairix-search
-
