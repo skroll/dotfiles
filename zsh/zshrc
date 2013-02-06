@@ -1,6 +1,6 @@
 export ZSH=$HOME/.zeesh
 
-export ZSH_THEME="default"
+export ZSH_THEME="badwolf"
 
 ## Uncomment this to use case-sensitive completion
 # export ZEESH_CASE_SENSITIVE="true"
@@ -23,6 +23,7 @@ export ZSH_THEME="default"
 ## Set this to override the default zsh highlighters
 # export ZEESH_HIGHLIGHT_HIGHLIGHTERS="main brackets"
 
-plugins=(git-flow zsh-syntax-highlighting)
+plugins=(git-flow zsh-syntax-highlighting gnu-utils)
 
 source $ZSH/zeesh.zsh
+

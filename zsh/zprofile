@@ -18,7 +18,12 @@ alias tm="tmux -u2"
 [[ -d ~/.cabal/bin ]]             && path=(~/.cabal/bin $path)
 [[ -d /usr/local/share/npm/bin ]] && path=(/usr/local/share/npm/bin $path)
 # }}}
- 
+# fpath {{{
+
+[[ -d /usr/local/share/zsh-completions ]] && \
+	fpath=(/usr/local/share/zsh-completions $fpath)
+
+# }}}
 # }}}
 # application specific -----------------------------------------------------{{{
 # haste {{{
@@ -58,4 +63,3 @@ mailpath=(~/.mail/gmail/INBOX'?You have new mail in gmail'
 # }}}
 
 # }}}
-
