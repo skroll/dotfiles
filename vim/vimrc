@@ -24,6 +24,7 @@ Bundle 'majutsushi/tagbar'
 Bundle 'abudden/TagHighlight'
 "Bundle 'msanders/snipmate.vim'
 Bundle 'vim-scripts/bufexplorer.zip'
+Bundle 'SirVer/ultisnips'
 
 " }}}
 " basic options ----------------------------------------------------------- {{{
@@ -677,6 +678,13 @@ let g:syntastic_stl_format = '[%E{%e Errors}%B{, }%W{%w Warnings}]'
 " }}}
 " tagbar {{{
 nmap <F8> :TagbarToggle<CR>
+" }}}
+" ultisnips {{{
+
+"let g:UltiSnipsSnippetsDir = '~/.vim/ultisnips'
+let g:UltiSnipsSnippetDirectories = ['mysnippets']
+let g:UltiSnipsExpandTrigger = '<c-a>'
+
 " }}}
 
 " }}}
