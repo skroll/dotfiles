@@ -22,8 +22,8 @@ Bundle 'tpope/vim-surround'
 Bundle 'scrooloose/syntastic'
 Bundle 'majutsushi/tagbar'
 Bundle 'abudden/TagHighlight'
-"Bundle 'msanders/snipmate.vim'
 Bundle 'vim-scripts/bufexplorer.zip'
+Bundle 'Lokaltog/vim-easymotion'
 Bundle 'SirVer/ultisnips'
 
 " }}}
@@ -539,7 +539,6 @@ augroup ft_yaml
 	au FileType yaml set expandtab
 augroup END
 
- 
 " }}}
 " plugin settings --------------------------------------------------------- {{{
 
