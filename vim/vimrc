@@ -25,6 +25,7 @@ Bundle 'abudden/TagHighlight'
 Bundle 'vim-scripts/bufexplorer.zip'
 Bundle 'Lokaltog/vim-easymotion'
 Bundle 'SirVer/ultisnips'
+Bundle 'skroll/vim-rust'
 
 " }}}
 " basic options ----------------------------------------------------------- {{{
