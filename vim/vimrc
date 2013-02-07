@@ -28,6 +28,7 @@ Bundle 'SirVer/ultisnips'
 Bundle 'skroll/vim-rust'
 Bundle 'Valloric/ListToggle'
 Bundle 'sjl/gundo.vim'
+Bundle 'vim-scripts/a.vim'
 
 " }}}
 " basic options ----------------------------------------------------------- {{{
