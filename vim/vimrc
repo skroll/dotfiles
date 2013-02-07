@@ -27,6 +27,7 @@ Bundle 'Lokaltog/vim-easymotion'
 Bundle 'SirVer/ultisnips'
 Bundle 'skroll/vim-rust'
 Bundle 'Valloric/ListToggle'
+Bundle 'sjl/gundo.vim'
 
 " }}}
 " basic options ----------------------------------------------------------- {{{
