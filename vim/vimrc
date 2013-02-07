@@ -545,6 +545,8 @@ augroup END
 " ack {{{
 
 nnoremap <leader>a :Ack!<space>
+" use silver searcher instead of default ack
+let g:ackprg = 'ag --nogroup --nocolor --column'
 
 " }}}
 " commentary {{{
