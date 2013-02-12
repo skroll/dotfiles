@@ -29,6 +29,7 @@ Bundle 'skroll/vim-rust'
 Bundle 'Valloric/ListToggle'
 Bundle 'sjl/gundo.vim'
 Bundle 'vim-scripts/a.vim'
+Bundle 'rodjek/vim-puppet'
 
 " }}}
 " basic options ----------------------------------------------------------- {{{
