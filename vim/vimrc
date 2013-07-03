@@ -17,7 +17,6 @@ Bundle 'skroll/Smart-Tabs'
 Bundle 'kien/ctrlp.vim'
 Bundle 'tpope/vim-fugitive'
 Bundle 'scrooloose/nerdtree'
-Bundle 'Lokaltog/vim-powerline'
 Bundle 'tpope/vim-surround'
 Bundle 'scrooloose/syntastic'
 Bundle 'majutsushi/tagbar'
@@ -683,8 +682,9 @@ let NERDTreeDirArrows = 1
 " }}}
 " powerline {{{
 
-let g:Powerline_symbols = 'fancy'
-let g:Powerline_cache_enabled = 1
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
 
 " }}}
 " syntastic {{{
@@ -757,4 +757,5 @@ if has('gui_running')
 else
 	" console vim
 endif
+
 
