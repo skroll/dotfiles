@@ -9,8 +9,6 @@ pwd = File.expand_path(File.dirname(__FILE__))
   ['tmux.conf',      '~/.tmux.conf',      0644],
   ['vim',            '~/.vim',            0755],
   ['vim/vimrc',      '~/.vimrc',          0600],
-  ['zsh/zshrc',      '~/.zshrc',          0600],
-  ['zsh/zprofile',   '~/.zprofile',       0600],
 ].each do |src, dest, chmod|
   src_path = "#{pwd}/#{src}"
   dest_path = File.expand_path(dest)
