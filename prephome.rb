@@ -3,10 +3,11 @@
 pwd = File.expand_path(File.dirname(__FILE__))
 
 [
-  ['gemrc',          '~/.gemrc',          0644],
-  ['irbrc',          '~/.irbrc',          0644],
-  ['gitconfig',      '~/.gitconfig',      0644],
-  ['tmux.conf',      '~/.tmux.conf',      0644],
+  ['gemrc',            '~/.gemrc',     0644],
+  ['irbrc',            '~/.irbrc',     0644],
+  ['gitconfig',        '~/.gitconfig', 0644],
+  ['gitignore_global', '~/.gitignore', 0644],
+  ['tmux.conf',        '~/.tmux.conf', 0644],
 ].each do |src, dest, chmod|
   src_path = "#{pwd}/#{src}"
   dest_path = File.expand_path(dest)
